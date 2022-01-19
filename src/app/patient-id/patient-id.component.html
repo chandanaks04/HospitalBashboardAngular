@@ -1,12 +1,24 @@
-<br>
-<div class="container card my-6" style="padding-top:20px ;">
+<nav class="navbar ">
+<div class="container-fluid">
+    <h1 style="color:brown">
+     <marquee behavior="alternate" direction="up" width="240%">
+     <marquee direction="right" behavior="alternate" >Search Patient By Id</marquee></marquee>
+   </h1>   
+ </div>
+</nav>
+<div>
+    <button type="submit" class="btn btn-primary mx-5" id="cancel"routerLink="/home">Home</button>
+</div>
+
+
+<div class="container card my-1 " style="padding-top:20px ;">
 
 <h6 > Search patient by Id</h6>
-<input type="number">
-<!-- <input type="number" [(ngModel)]="api.patient.pid" (input)="search()"> -->
+
+<input type="Text" [(ngModel)]="pid" (input)="search()">
 <br>
-<div class="card">
-<table class="table ">
+<div >
+<table class="table table-bordered table-success table-striped">
     <thead>
     <tr >
         
@@ -17,22 +29,17 @@
         <th scope="col">Doctor's prescription</th> 
     </tr>
 </thead>
-    <!-- <tr *ngFor="let row of patient">
-        <td>{{}}</td>
-        <td>{{}}</td>
-        <td>{{}}</td>
-        <td>{{}}</td>
-        <td>{{}}</td>
-    </tr> -->
-    <tbody>
-        <tr>
-            <td>chand</td>
-            <td>21</td>
-            <td>harsh</td>
-            <td>05/29/2021</td>
-            <td>bed rest</td>
-        </tr>
-    </tbody>
+<tbody>
+    <tr >
+        <td>{{docresponse.pname}}</td>
+        <td>{{docresponse.page}}</td>
+        <td>{{docresponse.doctor.dname}}</td>
+        <td>{{docresponse.date}}</td>
+        <td>{{docresponse.docDes}}</td>
+    </tr>
+</tbody>
 </table>
+
 </div>
+
 </div>

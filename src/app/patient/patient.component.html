@@ -23,37 +23,13 @@
             
           </div>
         <div class="input-group mb-3">
-            
-            
-
-
-
-            <select id="form_need" name="need" [(ngModel)]="api.doctor.dname" class="form-control" required="required">
-            <option value="" selected disabled>--select your Doctor--</option>
+            <select id="form_need" name="visitedDoctor" [(ngModel)]="dname" class="form-control" required="required">
+            <option value="" selected >--select your Doctor--</option>
             <option *ngFor="let doctor of doc">{{doctor.dname}}</option>
             
             </select>
             <br>
-            <input type="submit" value="search" (click)="getDoctorByName()">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <!-- <input type="submit" value="Options" (click)="getDoctorByName()"> -->
 
             <label class="input-group-text" for="inputGroupSelect02">Options</label>
           </div>

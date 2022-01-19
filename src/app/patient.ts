@@ -5,6 +5,8 @@ export class Patient {
     visitedDoctor!:string;
     date!:string;
     docDes!:string;
+    doctor!:any;
+    dname!:any;
      
     list: Array<any> = [];
 }

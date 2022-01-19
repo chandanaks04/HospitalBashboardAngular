@@ -4,4 +4,5 @@ export class Doctor {
     dage!:number;
     dgender!:string;
     specialist!:string;
+    visitedNoPatient!:number;
 }

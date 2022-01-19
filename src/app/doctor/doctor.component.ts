@@ -18,6 +18,7 @@ export class DoctorComponent implements OnInit {
   }
   
   msg!:String;
+  formValue!:NgForm;
    addDoctor(registrationForm:NgForm)
 
   {
@@ -29,12 +30,13 @@ export class DoctorComponent implements OnInit {
         this.msg=data;
         
         alert("Doctor Added sucessfully!!");
+        
       },
       (err: any) => {
           console.log(err);
           alert("unable to add Doctor Try someother time");
       }
-    )
+    );
   }
 
 }

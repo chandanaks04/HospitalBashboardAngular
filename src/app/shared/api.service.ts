@@ -31,7 +31,7 @@ export class ApiService {
       return this.http.get<any>(this.API+'/hospital/get/allDoctors');
     }
 
-    public getDoctorByName(dname:string)
+    public getDoctorByName(dname:any)
     {
       return this.http.get(this.API+'/hospital/get/doctorsname/'+dname);
     }

@@ -11,9 +11,10 @@ export class DoctorNameComponent implements OnInit {
 
   constructor(public api:ApiService) { }
 
-docresponse:any;
+docresponse:Doctor=new Doctor();
 doc:any;
 dname:any;
+
   ngOnInit(){
     let response=this.api.getAllDoctors();
     response.subscribe((data:any)=>this.doc=data);
@@ -22,7 +23,8 @@ dname:any;
  
 
 
- public getDoctorByName(){
+ public getDoctorByNam(){
+
    let customrep=this.api.getDoctorByName(this.dname);
    customrep.subscribe((data:any)=>this.docresponse=data);
  }
